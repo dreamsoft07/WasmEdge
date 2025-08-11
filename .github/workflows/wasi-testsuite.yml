@@ -35,7 +35,7 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-2022]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           path: WasmEdge
       - name: Ensure git safe directory
@@ -99,7 +99,7 @@ jobs:
           echo "$Env:GITHUB_WORKSPACE\\WasmEdge\\build\\lib\\api" | Out-File -FilePath $Env:GITHUB_PATH -Encoding utf8 -Append
 
       - name: Checkout wasi-testsuite
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: WebAssembly/wasi-testsuite
           ref: prod/testsuite-base

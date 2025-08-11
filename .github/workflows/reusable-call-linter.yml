@@ -10,7 +10,7 @@ jobs:
   lint:
     runs-on: ubuntu-24.04 # https://github.com/actions/runner-images/issues/10636
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - name: Ensure git safe directory
