@@ -39,7 +39,7 @@ jobs:
       ubuntu2004_cuda12: ${{ steps.readfile.outputs.ubuntu2004_cuda12 }}
       ubuntu_latest: ${{ steps.readfile.outputs.ubuntu_latest }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - id: filter

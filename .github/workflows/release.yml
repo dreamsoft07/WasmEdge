@@ -24,7 +24,7 @@ jobs:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Ensure git safe directory
         run: |
           git config --global --add safe.directory $(pwd)
@@ -134,7 +134,7 @@ jobs:
     needs: create_release
     steps:
       - name: checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Grant the safe directory for git
         run: |

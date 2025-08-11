@@ -27,7 +27,7 @@ jobs:
         run: |
           apt update && apt upgrade -y && \
           apt install -y wget cmake ninja-build curl git dpkg-dev llvm-dev liblld-dev gcc rpm g++
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - name: Grant the safe directory for git

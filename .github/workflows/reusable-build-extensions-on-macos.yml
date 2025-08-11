@@ -36,7 +36,7 @@ jobs:
       test_dir: build/test/plugins/${{ matrix.dir }}
       output_dir: build/plugins/${{ matrix.dir }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - name: Build and install dependencies

@@ -53,7 +53,7 @@ jobs:
     outputs:
       version: ${{ steps.prep.outputs.version }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - name: Ensure git safe directory
@@ -86,7 +86,7 @@ jobs:
     container:
       image: wasmedge/wasmedge:${{ matrix.docker_tag }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - name: Ensure git safe directory
@@ -141,7 +141,7 @@ jobs:
       output_bin: wasmedgePluginWasiNN.dll
     needs: [ get_version ]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - name: Ensure git safe directory
